@@ -79,4 +79,4 @@ $ python3 run_script.py
 ```
 pip install -r requirements.txt 
 ```
-  - Nothing extra installed yet, for future maybe
+  - Nothing extra installed yet, for future maybe?
