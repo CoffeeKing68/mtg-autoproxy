@@ -56,3 +56,27 @@ As of this release, the script can't handle:
 * Full automation of planeswalkers. The script does most of the heavy lifting, but requires the user to manually position the text as a final step. My typical workflow for planeswalkers is to run the script up until it errors, then position the inserted Scryfall scan to fill the canvas. From here, I resize the text layers until they line up with the real card, then reposition the art if necessary. *Save As* and saving as a PNG with the default settings is fine.
 * Devoid-style frames, miracle-style frames, and draft-matters frames - these will be added eventually but they're not a high priority.
 * Quoting something in a card's flavour text without italics. See: Yarok the Desecrated, Phyrexian Altar.
+
+# CoffeeKing extras
+## Command line
+- To run js from the command line do:
+```bash
+$ python3 run_script.py -ps (PHOTOSHOP TARGET) -js (JS FILE)
+```
+- The photoshop target can just be the code (CS6 or CC 2017)
+- The js file can be relative, python will make it absolute
+- Only configure to handle for MacOS
+  - May need to change for other platforms, but it will only be the part where the command is called
+  - Also, if there is a better way to call from MacOS, please tell me (but it works sooooo)
+- Can also make use of config.json (must copy `copy_me_config.json` to `config.json`)
+  - This can be used to house over variables in the future, seemed like a cool idea
+- If you fill out `photoshopTarget` and/or `javascriptToRun`, you don't have to add -ps and -js args, just call
+```bash
+$ python3 run_script.py
+```
+- Using Python 3.8.6, only compatibility issue I think there could be is that I make use of f-Strings (Not 100% sure)
+- Should do:
+```
+pip install -r requirements.txt 
+```
+  - Nothing extra installed yet, for future maybe
